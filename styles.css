@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(1, 34, 91);
+    color: #eeeeee;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #21aeff;
+    letter-spacing: 0.5px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    gap: 2.5rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #eeeeee;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.navigation a:hover {
+    color: #0091ff;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0091ff;
+    transition: width 0.3s ease;
+}
+
+.navigation a:hover::after {
+    width: 100%;
+}
+
+hr {
+    opacity: 0.2;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid rgba(33, 174, 255, 0.5);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+    gap: 3rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 600px;
+}
+
+.name {
+    color: #eeeeee;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.name span {
+    color: #21aeff;
+    font-weight: 600;
+}
+
+.title {
+    color: #21aeff;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    background: linear-gradient(90deg, #21aeff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-description {
+    color: #c4c4c4;
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 0.75rem 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn.cv {
+    background-color: #1365a4;
+    color: #eeeeee;
+    box-shadow: 0 4px 15px rgba(19, 101, 164, 0.3);
+}
+
+.btn.cv:hover {
+    background-color: #0d4d7a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(19, 101, 164, 0.4);
+}
+
+.btn.outline {
+    background: transparent;
+    color: #21aeff;
+    border: 2px solid #21aeff;
+}
+
+.btn.outline:hover {
+    background: rgba(33, 174, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(33, 174, 255, 0.2);
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+.arrow {
+    align-self: flex-start;
+    margin-top: 2rem;
+    opacity: 0.6;
+}
+
+/* About Me Section */
+.AbouteMe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8rem auto;
+    max-width: 1200px;
+    gap: 5rem;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.AbouteMe::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #0091ff, transparent);
+    opacity: 0.3;
+}
+
+.AbouteMeimg {
+    width: 450px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(33, 174, 255, 0.3));
+    animation: float 6s ease-in-out infinite;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.About {
+    color: #eeeeee;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.Me {
+    color: #0091ff;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.AbouteMepar {
+    color: #c4c4c4;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid #0091ff;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-tag {
+    background: rgba(33, 174, 255, 0.1);
+    color: #21aeff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(33, 174, 255, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.skill-tag:hover {
+    background: rgba(33, 174, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(33, 174, 255, 0.1);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: #eeeeee;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:hover {
+    color: #0091ff;
+    transform: translateY(-3px);
+    background: rgba(33, 174, 255, 0.1);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.highlight {
+    color: #21aeff;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 1.5rem;
+    }
+    
+    .navigation ul {
+        gap: 1.5rem;
+    }
+    
+    .hero, .AbouteMe {
+        gap: 2rem;
+    }
+    
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .AbouteMeimg {
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1rem auto;
+    }
+    
+    .navigation ul {
+        gap: 1rem;
+    }
+    
+    .hero, .AbouteMe {
+        flex-direction: column;
+        text-align: center;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+    }
+    
+    .hero-content {
+        align-items: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .arrow {
+        display: none;
+    }
+    
+    .AbouteMeimg {
+        width: 280px;
+    }
+    
+    .section-title {
+        justify-content: center;
+    }
+    
+    .AbouteMepar {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 1rem;
+        border-top: 2px solid #0091ff;
+        text-align: center;
+    }
+    
+    .skills-container {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .About, .Me {
+        font-size: 2.2rem;
+    }
+}
